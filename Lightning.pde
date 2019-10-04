@@ -13,23 +13,10 @@ void setup()
   {
   	worthy = 500;
   }
-  System.out.println(x);
 
 }
 void draw()
 {
-	while(endY < 500)
-	{
-		endY = startY + (int)(Math.random() * 9 + 1);
-		endX = startX + (int)(Math.random() * 19 - 9);
-		stroke(50,125,255);
-		line(startX+3,startY,endX+3,endY);
-		line(startX-3,startY,endX-3,endY);
-		stroke(255);
-		line(startX,startY,endX,endY);
-		startX = endX;
-		startY = endY;
-	}
 	stroke(155,155,155);
 	fill(155,155,155);
 	rect(160,200,180,110,15,15,15,15);
@@ -48,8 +35,18 @@ void draw()
 		line(238,320 + (i * 15),262,320 + (i * 15));
 	}
 	strokeWeight(0);
-	
-
+	while(endY < 500)
+	{
+		endY = startY + (int)(Math.random() * 9 + 1);
+		endX = startX + (int)(Math.random() * 19 - 9);
+		stroke(50,125,255);
+		line(startX+3,startY,endX+3,endY);
+		line(startX-3,startY,endX-3,endY);
+		stroke(255);
+		line(startX,startY,endX,endY);
+		startX = endX;
+		startY = endY;
+	}
 }
 void mousePressed()
 {
